@@ -3,3 +3,11 @@
   "role": "Trader",
   "tip": "Always check support and resistance levels."
 }
+<script>
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+      document.body.innerHTML += `<p>Name: ${data.name}</p>`;
+      document.body.innerHTML += `<p>Tip: ${data.tip}</p>`;
+  });
+</script>
